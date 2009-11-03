@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:paddingBottom="5sp" android:paddingTop="5sp" android:layout_width="fill_parent">
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/Author"
+		android:text="@+id/Author" android:textStyle="bold" android:textSize="28sp"></TextView>
+	
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/Text"
+		android:text="@+id/Text" android:layout_below="@+id/Author" android:textSize="22sp"></TextView><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/Date" android:text="@+id/Date" android:layout_below="@+id/Text" android:textSize="18sp" android:layout_marginTop="14sp"></TextView>
+
+</RelativeLayout>
+

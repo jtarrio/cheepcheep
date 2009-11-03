@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:gravity="center_vertical|center_horizontal">
+	<RelativeLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@android:id/list"
+		android:id="@+id/NoAuthTextLayout" android:layout_centerInParent="true">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_below="@android:id/list"
+			android:id="@+id/NoAuthTextTitle" android:text="@string/noauth_title"
+			android:textSize="28sp" android:layout_centerHorizontal="true"></TextView>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_below="@+id/NoAuthTextTitle"
+			android:id="@+id/NoAuthText" android:text="@string/noauth_text"
+			android:layout_centerHorizontal="true" android:gravity="center_horizontal" android:textSize="16sp" android:layout_marginBottom="5sp"></TextView>
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+			android:layout_below="@+id/NoAuthText" android:id="@+id/Signin"
+			android:text="@string/signin_button"></Button>
+	</RelativeLayout>
+	<ListView android:layout_below="@+id/TextView01" android:id="@android:id/list"
+		android:layout_width="fill_parent" android:layout_height="fill_parent" android:visibility="visible"></ListView>
+</RelativeLayout>

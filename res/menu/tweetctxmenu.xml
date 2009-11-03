@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/Reply" android:title="@string/menuitem_reply"></item>
+<item android:id="@+id/Retweet" android:title="@string/menuitem_retweet"></item>
+<item android:id="@+id/Delete" android:title="@string/menuitem_delete"></item>
+</menu>

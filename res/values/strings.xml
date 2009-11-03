@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Application -->
+	<string name="app_name">CheepCheep</string>
+	<string name="app_description">A Twitter client made for people who don\'t need everything in their mobile phones, and definitely not the kitchen sink.</string>
+
+    <!-- Error messages -->
+	<string name="error_title_server">Server Error</string>
+	<string name="error_server">There was a problem communicating with the Twitter server.</string>
+	<string name="error_title_unexpected_response">Invalid Data From Server</string>
+	<string name="error_unexpected_response">The data returned by the server could not be understood.</string>
+	<string name="error_title_invalid_auth">Authentication Error</string>
+	<string name="error_invalid_auth">The Twitter user name or password is not valid.</string>
+	<string name="error_title_user_not_found">User Not Found</string>
+	<string name="error_user_not_found">Could not find any data for the requested Twitter user.</string>
+	<string name="error_title_tweet_not_found">Tweet Not Found</string>
+	<string name="error_tweet_not_found">Could not find the requested tweet.</string>
+
+	<!-- Home screen -->
+	<string name="home_timeline_title">%s: Tweets for %s</string>
+	<string name="noauth_title">Not Authenticated</string>
+	<string name="noauth_text">To use %s, you need to sign in to Twitter. Please, press the button below to sign in.</string>
+	<string name="signin_button">Sign in</string>
+	<string name="menuitem_newtweet">New Tweet</string>
+	<string name="menuitem_update">Update</string>
+	<string name="menuitem_signin">Sign in</string>
+	<string name="menuitem_signout">Sign out</string>
+
+    <!-- User information screen -->
+	<string name="user_info_title">%s: Info on @%s</string>
+	<string name="counts_fmt">%d following, %d followers, %d updates.</string>
+	<string name="browse_homepage_button">Home Page</string>
+	<string name="menuitem_follow">Follow</string>
+	<string name="menuitem_unfollow">Unfollow</string>
+
+    <!-- Single tweet screen -->
+	<string name="single_tweet_title">%s: Tweet by @%s</string>
+	<string name="protected_updates">This user\'s tweets are protected, and you don\'t have permission to see them.</string>
+
+    <!-- Confirm delete dialog -->
+	<string name="confirm_delete">Do you really want to delete this tweet?</string>
+
+    <!-- Tweet context menu -->
+	<string name="menu_actions">Actions</string>
+	<string name="menuitem_reply">Reply</string>
+	<string name="menuitem_retweet">ReTweet</string>
+	<string name="menuitem_delete">Delete</string>
+
+    <!-- Tweet browse-to menu -->
+	<string name="menu_browse">Browse to</string>
+	<string name="browse_to_original_message">Original message</string>
+
+	<!-- New Tweet dialog -->
+	<string name="new_tweet_title">What are you doing?</string>
+	<string name="character_count_fmt">%d characters left.</string>
+	<string name="button_post">Post</string>
+	
+    <!-- Progress dialogs -->
+	<string name="loading_tweets">Loading tweets...</string>
+	<string name="loading_tweet">Loading tweet...</string>
+	<string name="posting_tweet">Posting the new tweet...</string>
+	<string name="loading_user_info">Loading user info...</string>
+	<string name="deleting_tweet">Deleting the selected tweet...</string>
+	<string name="following_user">Following user...</string>
+	<string name="unfollowing_user">Unfollowing user...</string>
+</resources>

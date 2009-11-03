@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/NewTweet" android:icon="@android:drawable/ic_menu_add"
+		android:title="@string/menuitem_newtweet"></item>
+	<item android:id="@+id/Update" android:icon="@drawable/updateicon"
+		android:title="@string/menuitem_update"></item>
+	<item android:title="@string/menuitem_signout" android:id="@+id/Signout"
+		android:icon="@drawable/signouticon"></item>
+</menu>
