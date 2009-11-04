@@ -6,7 +6,6 @@ import org.tarrio.cheepcheep.R;
 import org.tarrio.cheepcheep.model.Preferences;
 import org.tarrio.cheepcheep.model.Tweet;
 import org.tarrio.cheepcheep.service.PreferencesProvider;
-import org.tarrio.cheepcheep.service.impl.PreferencesProviderImpl;
 import org.tarrio.cheepcheep.task.AsyncTwitterTask;
 import org.tarrio.cheepcheep.task.GetSingleTweetTask;
 import org.tarrio.cheepcheep.task.TaskCallback;
@@ -31,7 +30,7 @@ public class SingleTweetActivity extends Activity implements OnClickListener {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		preferencesProvider = new PreferencesProviderImpl(this);
+		preferencesProvider = new PreferencesProvider(this);
 		Preferences pref = preferencesProvider.get();
 
 		Intent intent = getIntent();

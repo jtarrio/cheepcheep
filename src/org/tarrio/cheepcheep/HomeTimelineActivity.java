@@ -9,8 +9,6 @@ import org.tarrio.cheepcheep.model.Preferences;
 import org.tarrio.cheepcheep.model.Tweet;
 import org.tarrio.cheepcheep.service.PreferencesProvider;
 import org.tarrio.cheepcheep.service.TwitterStatusSaverService;
-import org.tarrio.cheepcheep.service.impl.PreferencesProviderImpl;
-import org.tarrio.cheepcheep.service.impl.TwitterStatusSaverServiceImpl;
 import org.tarrio.cheepcheep.task.AsyncTwitterTask;
 import org.tarrio.cheepcheep.task.TaskCallback;
 import org.tarrio.cheepcheep.task.UpdateTweetsTask;
@@ -61,8 +59,8 @@ public class HomeTimelineActivity extends ListActivity {
 
 		setupView();
 
-		preferencesProvider = new PreferencesProviderImpl(this);
-		twitterStatusSaver = new TwitterStatusSaverServiceImpl(this);
+		preferencesProvider = new PreferencesProvider(this);
+		twitterStatusSaver = new TwitterStatusSaverService(this);
 		tweets = twitterStatusSaver.loadTimeline();
 		tweetListActions = new TweetListActions(this, preferencesProvider,
 				tweets, new UpdateTweetsCallback(), new ReloadTweetsCallback());

@@ -7,7 +7,6 @@ import org.tarrio.cheepcheep.http.HttpClientFactory;
 import org.tarrio.cheepcheep.http.OAuthHttpClient;
 import org.tarrio.cheepcheep.model.Preferences;
 import org.tarrio.cheepcheep.service.PreferencesProvider;
-import org.tarrio.cheepcheep.service.impl.PreferencesProviderImpl;
 import org.tarrio.cheepcheep.task.AsyncTwitterTask;
 import org.tarrio.cheepcheep.task.TaskCallback;
 import org.tarrio.cheepcheep.task.VerifyCredentialsTask;
@@ -25,7 +24,7 @@ public class OAuthActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		final PreferencesProvider preferencesProvider = new PreferencesProviderImpl(
+		final PreferencesProvider preferencesProvider = new PreferencesProvider(
 				this);
 
 		Intent i = getIntent();

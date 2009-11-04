@@ -7,7 +7,6 @@ import org.tarrio.cheepcheep.model.Preferences;
 import org.tarrio.cheepcheep.model.Tweet;
 import org.tarrio.cheepcheep.model.User;
 import org.tarrio.cheepcheep.service.PreferencesProvider;
-import org.tarrio.cheepcheep.service.impl.PreferencesProviderImpl;
 import org.tarrio.cheepcheep.task.AsyncTwitterTask;
 import org.tarrio.cheepcheep.task.FollowUnfollowUserTask;
 import org.tarrio.cheepcheep.task.GetUserInfoTask;
@@ -42,7 +41,7 @@ public class UserInfoActivity extends Activity implements
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		preferencesProvider = new PreferencesProviderImpl(this);
+		preferencesProvider = new PreferencesProvider(this);
 		Preferences pref = preferencesProvider.get();
 
 		Intent intent = getIntent();

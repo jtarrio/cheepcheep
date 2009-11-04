@@ -9,7 +9,6 @@ import org.tarrio.cheepcheep.exceptions.UserNotFoundError;
 import org.tarrio.cheepcheep.http.HttpClientFactory;
 import org.tarrio.cheepcheep.model.Preferences;
 import org.tarrio.cheepcheep.service.TwitterService;
-import org.tarrio.cheepcheep.service.impl.TwitterServiceImpl;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -43,7 +42,7 @@ public abstract class AsyncTwitterTask {
 			TaskCallback successCallback) {
 		this.activity = activity;
 		this.prefs = prefs;
-		this.twitterService = new TwitterServiceImpl(HttpClientFactory
+		this.twitterService = new TwitterService(HttpClientFactory
 				.getClient(prefs));
 		this.callback = successCallback;
 		this.status = STATUS_OK;
