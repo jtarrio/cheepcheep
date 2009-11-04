@@ -372,6 +372,8 @@ public class TwitterService {
 	private void checkStatusCommon(int status) throws AuthError, NetError {
 		if (status == 401)
 			throw new AuthError("Authentication failed");
+		if (status == 403)
+			throw new AuthError("Permission denied");
 		if ((status < 200) || (status >= 300))
 			throw new NetError(
 					"The Twitter server returned a bad status code: "

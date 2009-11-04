@@ -9,8 +9,8 @@
 	<string name="error_server">There was a problem communicating with the Twitter server.</string>
 	<string name="error_title_unexpected_response">Invalid Data From Server</string>
 	<string name="error_unexpected_response">The data returned by the server could not be understood.</string>
-	<string name="error_title_invalid_auth">Authentication Error</string>
-	<string name="error_invalid_auth">The Twitter user name or password is not valid.</string>
+	<string name="error_title_invalid_auth">Authorization Error</string>
+	<string name="error_invalid_auth">You don\'t have permission to access this.</string>
 	<string name="error_title_user_not_found">User Not Found</string>
 	<string name="error_user_not_found">Could not find any data for the requested Twitter user.</string>
 	<string name="error_title_tweet_not_found">Tweet Not Found</string>
