@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_height="wrap_content" android:layout_width="fill_parent">
-	<ImageView android:id="@+id/UserAvatar" android:layout_width="64px"
-		android:layout_height="64px" android:layout_marginRight="5sp"
-		android:layout_marginBottom="5sp"></ImageView>
+	<ImageView android:id="@+id/UserAvatar" android:layout_marginRight="5sp"
+		android:layout_marginBottom="5sp" android:layout_height="64sp" android:layout_width="64sp"></ImageView>
 	<TextView android:layout_height="wrap_content"
 		android:layout_toRightOf="@+id/UserAvatar" android:layout_width="wrap_content"
 		android:textSize="28sp" android:id="@+id/ScreenName" android:text="@+id/UserName"></TextView>
