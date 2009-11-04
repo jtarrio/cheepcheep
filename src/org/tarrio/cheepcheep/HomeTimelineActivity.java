@@ -66,7 +66,8 @@ public class HomeTimelineActivity extends ListActivity {
 		tweets = twitterStatusSaver.loadTimeline();
 		tweetListActions = new TweetListActions(this, preferencesProvider,
 				tweets, new UpdateTweetsCallback(), new ReloadTweetsCallback());
-
+		lastUpdateTimestamp = 0L;
+		
 		changeView();
 		tweetListAdapter = new TweetListAdapter(this, tweets);
 		setListAdapter(tweetListAdapter);
