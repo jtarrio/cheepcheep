@@ -2,6 +2,7 @@ package org.tarrio.cheepcheep.dialog;
 
 import org.tarrio.cheepcheep.R;
 import org.tarrio.cheepcheep.service.PreferencesProvider;
+import org.tarrio.cheepcheep.task.AsyncTwitterTask;
 import org.tarrio.cheepcheep.task.CreateNewTweetTask;
 import org.tarrio.cheepcheep.task.TaskCallback;
 
@@ -49,7 +50,7 @@ public class NewTweetDialog extends CheepCheepDialog {
 			prefill.append(prefillText);
 		editText.setText(prefill.toString());
 	}
-	
+
 	/**
 	 * Code that manages the "New Tweet" dialog.
 	 */
@@ -74,9 +75,22 @@ public class NewTweetDialog extends CheepCheepDialog {
 			if (v.getId() == R.id.NewTweetPostButton) {
 				EditText tweetEdit = (EditText) view
 						.findViewById(R.id.NewTweetEdit);
-				String text = tweetEdit.getText().toString();
+				final String text = tweetEdit.getText().toString();
+				TaskCallback repeatDialogCallback = new TaskCallback() {
+					@Override
+					public void onSuccess(AsyncTwitterTask task) {
+						callback.onSuccess(task);
+					}
+
+					@Override
+					public void onFailure(int statusCode, AsyncTwitterTask task) {
+						callback.onFailure(statusCode, task);
+						new NewTweetDialog(activity, preferencesProvider,
+								callback, null, text, responseToId).show();
+					}
+				};
 				new CreateNewTweetTask(activity, preferencesProvider.get(),
-						callback, text, responseToId).run();
+						repeatDialogCallback, text, responseToId).run();
 				dialog.dismiss();
 			}
 		}
