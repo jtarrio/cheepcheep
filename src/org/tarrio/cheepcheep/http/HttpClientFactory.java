@@ -7,7 +7,6 @@ import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import oauth.signpost.signature.SignatureMethod;
 
 import org.apache.http.client.HttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.tarrio.cheepcheep.model.Preferences;
 
 public class HttpClientFactory {
@@ -46,7 +45,6 @@ public class HttpClientFactory {
 		if (client != null)
 			return client;
 
-		HttpClient httpClient = new DefaultHttpClient();
 		OAuthConsumer consumer = new CommonsHttpOAuthConsumer(
 				OAuthCredentials.CONSUMER_KEY,
 				OAuthCredentials.CONSUMER_SECRET, SignatureMethod.HMAC_SHA1);
@@ -58,7 +56,7 @@ public class HttpClientFactory {
 					.getConsumerSecret());
 		}
 
-		client = new OAuthHttpClient(httpClient, consumer, provider);
+		client = new OAuthHttpClient(consumer, provider);
 		return client;
 	}
 }

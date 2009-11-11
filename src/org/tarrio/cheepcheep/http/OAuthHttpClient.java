@@ -15,6 +15,7 @@ import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.AbortableHttpRequest;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.conn.ClientConnectionManager;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.HttpParams;
 import org.apache.http.protocol.HttpContext;
 
@@ -26,17 +27,12 @@ public class OAuthHttpClient implements HttpClient {
 
 	volatile private AbortableHttpRequest currentRequest;
 
-	public OAuthHttpClient(HttpClient httpClient, OAuthConsumer consumer,
-			OAuthProvider provider) {
+	public OAuthHttpClient(OAuthConsumer consumer, OAuthProvider provider) {
 		super();
-		this.httpClient = httpClient;
 		this.consumer = consumer;
 		this.provider = provider;
+		this.httpClient = new DefaultHttpClient();
 		this.currentRequest = null;
-	}
-
-	public HttpClient getHttpClient() {
-		return httpClient;
 	}
 
 	public OAuthConsumer getConsumer() {
@@ -47,11 +43,9 @@ public class OAuthHttpClient implements HttpClient {
 		return provider;
 	}
 
-	public void abortCurrentRequest() {
-		synchronized (this) {
-			if (currentRequest != null)
-				currentRequest.abort();
-		}
+	public synchronized void abortCurrentRequest() {
+		if (currentRequest != null)
+			currentRequest.abort();
 	}
 
 	public HttpResponse execute(HttpHost target, HttpRequest request,
