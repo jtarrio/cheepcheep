@@ -61,7 +61,15 @@ public class TwitterJSONSerializer {
 		tweet.setInReplyToScreenName(getStringINN(status,
 				"in_reply_to_screen_name"));
 		tweet.setDateTime(parseDate(status.getString("created_at")));
-		tweet.setText(unescapeHtml(status.getString("text")));
+		if (status.has("retweeted_status")) {
+			Tweet reTweeted = deserializeTweet(status.getJSONObject("retweeted_status"));
+			StringBuilder sb = new StringBuilder("RT @");
+			sb.append(unescapeHtml(reTweeted.getScreenName()));
+			sb.append(" ");
+			sb.append(reTweeted.getText());
+			tweet.setText(sb.toString());
+		} else
+			tweet.setText(unescapeHtml(status.getString("text")));
 		JSONObject user = status.getJSONObject("user");
 		tweet.setScreenName(user.getString("screen_name"));
 		return tweet;
