@@ -1,0 +1,6 @@
+2009-12-15 Version 0.91
+ * Parse server-side retweets.
+ * Now works in non-English locales (specify US locale when parsing dates).
+
+2009-12-12 Version 0.9
+ * Initial release.
