@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,6 +21,7 @@ import org.tarrio.cheepcheep.model.User;
 public class TwitterJSONSerializer {
 
 	private static final String DATE_FORMAT = "EEE MMM dd HH:mm:ss ZZZZ yyyy";
+	private static final SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT, Locale.US);
 
 	/**
 	 * Converts a JSON array representing a Twitter timeline into a list of
@@ -64,7 +66,7 @@ public class TwitterJSONSerializer {
 		if (status.has("retweeted_status")) {
 			Tweet reTweeted = deserializeTweet(status.getJSONObject("retweeted_status"));
 			StringBuilder sb = new StringBuilder("RT @");
-			sb.append(unescapeHtml(reTweeted.getScreenName()));
+			sb.append(reTweeted.getScreenName());
 			sb.append(" ");
 			sb.append(reTweeted.getText());
 			tweet.setText(sb.toString());
@@ -123,7 +125,6 @@ public class TwitterJSONSerializer {
 	}
 
 	private static Date parseDate(String date) throws ParseError {
-		SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT);
 		try {
 			return df.parse(date);
 		} catch (ParseException e) {
