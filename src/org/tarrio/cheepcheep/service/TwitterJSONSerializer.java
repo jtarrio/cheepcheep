@@ -59,9 +59,6 @@ public class TwitterJSONSerializer {
 			throws JSONException, ParseError {
 		Tweet tweet = new Tweet();
 		tweet.setId(status.getLong("id"));
-		tweet.setInReplyToId(getLongINN(status, "in_reply_to_status_id"));
-		tweet.setInReplyToScreenName(getStringINN(status,
-				"in_reply_to_screen_name"));
 		tweet.setDateTime(parseDate(status.getString("created_at")));
 		if (status.has("retweeted_status")) {
 			Tweet reTweeted = deserializeTweet(status.getJSONObject("retweeted_status"));
@@ -70,8 +67,14 @@ public class TwitterJSONSerializer {
 			sb.append(" ");
 			sb.append(reTweeted.getText());
 			tweet.setText(sb.toString());
-		} else
+			tweet.setInReplyToId(reTweeted.getInReplyToId());
+			tweet.setInReplyToScreenName(reTweeted.getInReplyToScreenName());
+		} else {
 			tweet.setText(unescapeHtml(status.getString("text")));
+			tweet.setInReplyToId(getLongINN(status, "in_reply_to_status_id"));
+			tweet.setInReplyToScreenName(getStringINN(status,
+					"in_reply_to_screen_name"));
+		}
 		JSONObject user = status.getJSONObject("user");
 		tweet.setScreenName(user.getString("screen_name"));
 		return tweet;
