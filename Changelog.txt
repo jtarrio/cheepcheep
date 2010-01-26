@@ -1,3 +1,6 @@
+2010-XX-YY Version 0.93 UNRELEASED
+ * UNRELEASED
+
 2010-01-25 Version 0.92
  * Get link to original message in retweeted responses.
  * Fixed invalid OAuth signatures when posting updates with non-ASCII chars.
