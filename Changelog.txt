@@ -1,3 +1,7 @@
+2010-01-25 Version 0.92
+ * Get link to original message in retweeted responses.
+ * Fixed invalid OAuth signatures when posting updates with non-ASCII chars.
+
 2009-12-15 Version 0.91
  * Parse server-side retweets.
  * Now works in non-English locales (specify US locale when parsing dates).

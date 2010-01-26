@@ -114,7 +114,7 @@ public class TwitterService {
 			// Twitter returns status code 417.
 			request.getParams().setBooleanParameter(
 					CoreProtocolPNames.USE_EXPECT_CONTINUE, false);
-			UrlEncodedFormEntity entity = new UrlEncodedFormEntity(query);
+			UrlEncodedFormEntity entity = new UrlEncodedFormEntity(query, "UTF-8");
 			request.setEntity(entity);
 			HttpResponse response = httpClient.execute(host, request);
 			checkStatus(response);
