@@ -18,8 +18,8 @@ public class Constants {
 	public static final String ACTION_OAUTH = "org.tarrio.cheepcheep.ACTION_OAUTH";
 	
 	// Maximum number of tweets in the home timeline screen
-	public static final int HOME_MAX_TWEETS = 40;
+	public static final int HOME_MAX_TWEETS = 50;
 	// Maximum number of tweets in a user's timeline screen
-	public static final int USER_MAX_TWEETS = 20;
+	public static final int USER_MAX_TWEETS = 40;
 	
 }
