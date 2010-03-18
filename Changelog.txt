@@ -1,5 +1,6 @@
 2010-XX-YY Version 0.93 UNRELEASED
- * UNRELEASED
+ * Increase number of tweets shown to 50 in homeline, 40 in user view.
+ * Separate user profile and user's tweets into tabs in the user view.
 
 2010-01-25 Version 0.92
  * Get link to original message in retweeted responses.

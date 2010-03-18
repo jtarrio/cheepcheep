@@ -28,7 +28,9 @@
 
     <!-- User information screen -->
 	<string name="user_info_title">%s: Info on @%s</string>
-	<string name="counts_fmt">%d following, %d followers, %d updates.</string>
+	<string name="user_info_tab_title">Profile</string>
+	<string name="user_tweets_tab_title">Latest Tweets</string>
+	<string name="counts_fmt">%d following, %d followers, %d tweets.</string>
 	<string name="browse_homepage_button">Home Page</string>
 	<string name="menuitem_follow">Follow</string>
 	<string name="menuitem_unfollow">Unfollow</string>
