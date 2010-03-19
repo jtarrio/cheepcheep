@@ -1,3 +1,7 @@
+2010-03-18 Version 0.931
+ * Revert tabbing of user view, as there's a bug that hits me with Android 2.1
+   (possibly 2.0 too).
+
 2010-03-18 Version 0.93
  * Increase number of tweets shown to 50 in homeline, 40 in user view.
  * Separate user profile and user's tweets into tabs in the user view.

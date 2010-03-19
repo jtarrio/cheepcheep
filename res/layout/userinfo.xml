@@ -1,56 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@android:id/tabhost" android:layout_height="fill_parent"
-	android:layout_width="fill_parent">
-	<LinearLayout android:orientation="vertical"
-		android:layout_width="fill_parent" android:layout_height="fill_parent">
-		<TabWidget android:id="@android:id/tabs"
-			android:layout_height="wrap_content" android:layout_width="fill_parent"
-			android:layout_marginTop="5sp"></TabWidget>
-		<FrameLayout android:layout_height="wrap_content"
-			android:id="@android:id/tabcontent" android:layout_width="fill_parent">
-			<RelativeLayout android:id="@+id/UserInfoTab"
-				android:layout_height="wrap_content" android:layout_width="fill_parent"
-				android:padding="5sp">
-				<ImageView android:id="@+id/UserAvatar"
-					android:layout_marginRight="5sp" android:layout_marginBottom="5sp"
-					android:layout_height="64sp" android:layout_width="64sp"></ImageView>
-				<TextView android:layout_height="wrap_content"
-					android:layout_toRightOf="@+id/UserAvatar" android:layout_width="wrap_content"
-					android:textSize="28sp" android:id="@+id/ScreenName" android:text="@+id/UserName"></TextView>
-				<TextView android:layout_height="wrap_content"
-					android:layout_toRightOf="@+id/UserAvatar" android:layout_width="wrap_content"
-					android:layout_below="@+id/ScreenName" android:id="@+id/RealName"
-					android:text="@+id/RealName" android:textSize="16sp"></TextView>
-				<TextView android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:layout_below="@+id/UserAvatar"
-					android:id="@+id/Description" android:text="@+id/Description"></TextView>
-				<TextView android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:layout_below="@+id/Description"
-					android:id="@+id/Location" android:text="@+id/Location"></TextView>
-				<TextView android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:layout_below="@+id/Location"
-					android:id="@+id/Counts" android:layout_marginTop="5sp"
-					android:text="@string/counts_fmt"></TextView>
-				<Button android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:id="@+id/HomePageButton"
-					android:text="@string/browse_homepage_button"
-					android:layout_centerInParent="true" android:layout_below="@+id/Counts"
-					android:layout_marginTop="5sp"></Button>
-			</RelativeLayout>
-			<RelativeLayout android:id="@+id/UserTweetsTab"
-				android:layout_height="wrap_content" android:layout_width="fill_parent">
-				<TextView android:layout_height="wrap_content"
-					android:layout_width="wrap_content" android:id="@+id/ProtectedUpdates"
-					android:text="@string/protected_updates"
-					android:layout_centerInParent="true" android:gravity="center_horizontal"
-					android:textSize="18sp" android:layout_marginTop="10sp"></TextView>
-				<ListView android:id="@+id/Updates" android:layout_width="fill_parent"
-					android:layout_height="fill_parent">
-				</ListView>
-			</RelativeLayout>
-		</FrameLayout>
-	</LinearLayout>
-	
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:layout_width="fill_parent">
+	<ImageView android:id="@+id/UserAvatar" android:layout_marginRight="5sp"
+		android:layout_marginBottom="5sp" android:layout_height="64sp" android:layout_width="64sp"></ImageView>
+	<TextView android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/UserAvatar" android:layout_width="wrap_content"
+		android:textSize="28sp" android:id="@+id/ScreenName" android:text="@+id/UserName"></TextView>
+	<TextView android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/UserAvatar" android:layout_width="wrap_content"
+		android:layout_below="@+id/ScreenName" android:id="@+id/RealName"
+		android:text="@+id/RealName" android:textSize="16sp"></TextView>
+	<TextView android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_below="@+id/UserAvatar"
+		android:id="@+id/Description" android:text="@+id/Description"></TextView>
+	<TextView android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_below="@+id/Description"
+		android:id="@+id/Location" android:text="@+id/Location"></TextView>
+	<TextView android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_below="@+id/Location"
+		android:id="@+id/Counts" android:layout_marginTop="5sp" android:text="@string/counts_fmt"></TextView>
+	<Button android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:id="@+id/HomePageButton"
+		android:text="@string/browse_homepage_button"
+		android:layout_centerInParent="true" android:layout_below="@+id/Counts"
+		android:layout_marginTop="5sp"></Button>
+	<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/HomePageButton" android:id="@+id/ProtectedUpdates" android:text="@string/protected_updates" android:layout_centerInParent="true" android:gravity="center_horizontal" android:textSize="18sp" android:layout_marginTop="10sp"></TextView><ListView android:id="@+id/Updates" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_below="@+id/HomePageButton">
+	</ListView>
 
-</TabHost>
+</RelativeLayout>

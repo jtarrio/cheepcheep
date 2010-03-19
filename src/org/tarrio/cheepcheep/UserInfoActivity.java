@@ -12,7 +12,7 @@ import org.tarrio.cheepcheep.task.FollowUnfollowUserTask;
 import org.tarrio.cheepcheep.task.GetUserInfoTask;
 import org.tarrio.cheepcheep.task.TaskCallback;
 
-import android.app.TabActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -26,11 +26,10 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 
-public class UserInfoActivity extends TabActivity implements
+public class UserInfoActivity extends Activity implements
 		ListView.OnItemClickListener {
 
 	private PreferencesProvider preferencesProvider;
@@ -155,13 +154,6 @@ public class UserInfoActivity extends TabActivity implements
 		}
 
 		setContentView(view);
-
-		TabHost tabHost = getTabHost();
-		tabHost.addTab(tabHost.newTabSpec("tab_userinfo").setIndicator(
-				getString(R.string.user_info_tab_title)).setContent(R.id.UserInfoTab));
-		tabHost.addTab(tabHost.newTabSpec("tab_usertweets").setIndicator(
-				getString(R.string.user_tweets_tab_title)).setContent(R.id.UserTweetsTab));
-		tabHost.setCurrentTab(0);
 	}
 
 	private void setTextForViewOrMakeGone(View view, int id, String text) {
