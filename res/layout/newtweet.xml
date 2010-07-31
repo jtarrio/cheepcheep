@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="wrap_content" android:layout_height="wrap_content">
-	
-	
-	<EditText android:layout_height="wrap_content"
-		android:id="@+id/NewTweetEdit"
-		android:layout_width="fill_parent" android:inputType="textCapSentences"></EditText>
+	<EditText android:layout_height="wrap_content" android:id="@+id/NewTweetEdit"
+		android:layout_width="fill_parent"
+		android:inputType="textCapSentences|textAutoCorrect|textMultiLine|textLongMessage"></EditText>
 	<TextView android:layout_width="wrap_content"
 		android:layout_height="wrap_content" android:id="@+id/NewTweetNumCharsLabel"
-		android:layout_marginRight="5sp"
-		android:gravity="right" android:layout_alignBaseline="@+id/NewTweetPostButton"
-		android:layout_below="@+id/NewTweetEdit" android:layout_alignParentLeft="true" android:layout_marginLeft="5sp" android:text="@string/character_count_fmt"></TextView>
-	<Button android:layout_height="wrap_content" android:layout_below="@+id/NewTweetEdit"
-		android:layout_alignParentRight="true"
-		android:id="@+id/NewTweetPostButton" android:layout_toRightOf="@+id/NewTweetNumCharsLabel" android:layout_width="wrap_content" android:text="@string/button_post"></Button>
-
+		android:layout_marginRight="5sp" android:gravity="right"
+		android:layout_alignBaseline="@+id/NewTweetPostButton"
+		android:layout_below="@+id/NewTweetEdit"
+		android:layout_alignParentLeft="true" android:layout_marginLeft="5sp"
+		android:text="@string/character_count_fmt"></TextView>
+	<Button android:layout_height="wrap_content"
+		android:layout_below="@+id/NewTweetEdit"
+		android:layout_alignParentRight="true" android:id="@+id/NewTweetPostButton"
+		android:layout_toRightOf="@+id/NewTweetNumCharsLabel"
+		android:layout_width="wrap_content" android:text="@string/button_post"></Button>
 </RelativeLayout>

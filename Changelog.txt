@@ -1,3 +1,7 @@
+2010-07-31 Version 0.94
+ * Allow multi-line in New Tweet input box.
+ * Allow to install the application on the SD card in Android 2.2.
+
 2010-03-18 Version 0.931
  * Revert tabbing of user view, as there's a bug that hits me with Android 2.1
    (possibly 2.0 too).

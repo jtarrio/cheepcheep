@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="org.tarrio.cheepcheep" android:versionCode="0931" android:versionName="0.931">
-	<application android:label="@string/app_name" android:icon="@drawable/cheepcheepicon" android:description="@string/app_description">
+	package="org.tarrio.cheepcheep" android:versionCode="0940"
+	android:versionName="0.94" android:installLocation="auto">
+	<application android:label="@string/app_name" android:icon="@drawable/cheepcheepicon"
+		android:description="@string/app_description">
 		<activity android:name=".HomeTimelineActivity" android:label="@string/app_name"
-			android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale" android:allowTaskReparenting="true">
+			android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
+			android:allowTaskReparenting="true">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
@@ -23,5 +26,5 @@
 		</activity>
 	</application>
 	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
-	<uses-sdk android:minSdkVersion="4"/>
+	<uses-sdk android:minSdkVersion="4" android:targetSdkVersion="8" />
 </manifest> 
