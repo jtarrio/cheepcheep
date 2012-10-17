@@ -17,7 +17,7 @@
 	<string name="error_tweet_not_found">Could not find the requested tweet.</string>
 
 	<!-- Home screen -->
-	<string name="home_timeline_title">%s: Tweets for %s</string>
+	<string name="home_timeline_title">%1$s: Tweets for %2$s</string>
 	<string name="noauth_title">Not Authenticated</string>
 	<string name="noauth_text">To use %s, you need to sign in to Twitter. Please, press the button below to sign in.</string>
 	<string name="signin_button">Sign in</string>
@@ -27,14 +27,14 @@
 	<string name="menuitem_signout">Sign out</string>
 
     <!-- User information screen -->
-	<string name="user_info_title">%s: Info on @%s</string>
-	<string name="counts_fmt">%d following, %d followers, %d tweets.</string>
+	<string name="user_info_title">%1$s: Info on @%2$s</string>
+	<string name="counts_fmt">%1$d following, %2$d followers, %3$d tweets.</string>
 	<string name="browse_homepage_button">Home Page</string>
 	<string name="menuitem_follow">Follow</string>
 	<string name="menuitem_unfollow">Unfollow</string>
 
     <!-- Single tweet screen -->
-	<string name="single_tweet_title">%s: Tweet by @%s</string>
+	<string name="single_tweet_title">%1$s: Tweet by @%2$s</string>
 	<string name="protected_updates">This user\'s tweets are protected, and you don\'t have permission to see them.</string>
 
     <!-- Confirm delete dialog -->

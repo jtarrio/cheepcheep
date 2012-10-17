@@ -1,3 +1,7 @@
+2012-10-16 Version 0.95
+ * Fix CheepCheep to access api.twitter.com instead of twitter.com
+ * Add positional markers in string resources.
+
 2010-07-31 Version 0.94
  * Allow multi-line in New Tweet input box.
  * Allow to install the application on the SD card in Android 2.2.

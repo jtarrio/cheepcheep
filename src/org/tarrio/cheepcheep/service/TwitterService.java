@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.apache.http.HttpHost;
 import org.apache.http.HttpRequest;
@@ -39,7 +40,7 @@ import android.net.Uri.Builder;
 public class TwitterService {
 
 	private HttpClient httpClient;
-	private static final HttpHost host = new HttpHost("twitter.com");
+	private static final HttpHost host = new HttpHost("api.twitter.com");
 
 	/**
 	 * Creates a Twitter service on the given HTTP client instance.
@@ -382,7 +383,7 @@ public class TwitterService {
 
 	private Uri.Builder getTwitterUriBuilder(String command) {
 		Uri.Builder ub = new Uri.Builder().scheme("http").authority(
-				"twitter.com").path(command + ".json");
+				"api.twitter.com").path("1/" + command + ".json");
 		return ub;
 	}
 
