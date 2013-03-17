@@ -1,3 +1,7 @@
+2013-03-17 Version 0.96
+ * Also access api.twitter.com for OAuth handshake.
+ * Fix URL of follow/unfollow methods.
+
 2012-10-16 Version 0.95
  * Fix CheepCheep to access api.twitter.com instead of twitter.com
  * Add positional markers in string resources.
