@@ -28,9 +28,9 @@ public class HttpClientFactory {
 	 * </code>
 	 */
 
-	private static String REQUEST_TOKEN_URL = "http://twitter.com/oauth/request_token";
-	private static String ACCESS_TOKEN_URL = "http://twitter.com/oauth/access_token";
-	private static String AUTHORIZE_URL = "http://twitter.com/oauth/authorize";
+	private static String REQUEST_TOKEN_URL = "http://api.twitter.com/oauth/request_token";
+	private static String ACCESS_TOKEN_URL = "http://api.twitter.com/oauth/access_token";
+	private static String AUTHORIZE_URL = "http://api.twitter.com/oauth/authorize";
 
 	private static HttpClient client;
 

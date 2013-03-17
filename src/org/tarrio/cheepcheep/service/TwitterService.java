@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.apache.http.HttpHost;
 import org.apache.http.HttpRequest;
@@ -300,7 +299,7 @@ public class TwitterService {
 	public void changeFollowUser(String screenName, boolean follow)
 			throws UserNotFoundError, NetError, AuthError {
 		try {
-			Builder ub = getTwitterUriBuilder("/friendships/"
+			Builder ub = getTwitterUriBuilder("friendships/"
 					+ (follow ? "create" : "destroy"));
 			ub.appendQueryParameter("screen_name", screenName);
 			HttpRequest request = new HttpPost(ub.build().toString());
@@ -383,7 +382,7 @@ public class TwitterService {
 
 	private Uri.Builder getTwitterUriBuilder(String command) {
 		Uri.Builder ub = new Uri.Builder().scheme("http").authority(
-				"api.twitter.com").path("1/" + command + ".json");
+				"api.twitter.com").path("1.1/" + command + ".json");
 		return ub;
 	}
 
