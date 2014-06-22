@@ -1,5 +1,10 @@
 README - CheepCheep
 
+CheepCheep is a lightweight Twitter client for Android.
+
+See CheepCheep's home page at http://jacobo.tarrio.org/cheepcheep
+
+
 To compile CheepCheep:
 
 1- Import the project into Eclipse.
