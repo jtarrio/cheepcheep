@@ -1,5 +1,0 @@
-
-syntax: regexp
-^src/org/tarrio/cheepcheep/http/OAuthCredentials\.java$
-syntax: glob
-bin/*
